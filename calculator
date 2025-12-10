@@ -1,0 +1,64 @@
+# ---------------------------------------------
+#        Simple Calculator Project in Python
+# ---------------------------------------------
+
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    if b == 0:
+        return "❌ Cannot divide by zero!"
+    return a / b
+
+def mod(a, b):
+    return a % b
+
+def calculator():
+    print("="*40)
+    print("          PYTHON CALCULATOR")
+    print("="*40)
+
+    print("""
+Choose Operation:
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*)
+4. Division (/)
+5. Modulus (%)
+6. Exit
+    """)
+
+    choice = int(input("Enter your choice (1-6): "))
+
+    if choice == 6:
+        print("Thank you for using Calculator 😊")
+        return
+
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+
+    if choice == 1:
+        print("Result =", add(a, b))
+    elif choice == 2:
+        print("Result =", sub(a, b))
+    elif choice == 3:
+        print("Result =", mul(a, b))
+    elif choice == 4:
+        print("Result =", div(a, b))
+    elif choice == 5:
+        print("Result =", mod(a, b))
+    else:
+        print("❌ Invalid Choice!")
+
+    print("\n--------------------------------------\n")
+    calculator()  # repeat again
+
+
+# Start Program
+calculator()
